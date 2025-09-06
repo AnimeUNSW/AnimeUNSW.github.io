@@ -11,6 +11,7 @@
   import xiaohongshu from "$lib/assets/xiaohongshu.png"
   import JoinButton from "$lib/components/join_button.svelte";
   import JoinButtonExpanded from "$lib/components/join_button_expanded.svelte";
+  import down_arrow from "$lib/assets/arrow_drop_down.png"
   import { fade } from 'svelte/transition';
   import { Button } from "./ui/button";
 
@@ -65,9 +66,12 @@
     </li>
   </ul>
 
+
+  <!-- join button approach 1 -->
+
   <!-- utilise a flag whenever hovering over -->
   <!-- svelte-ignore a11y-no-static-element-interactions -->
-  <div
+  <!-- <div
     onmouseenter={() => (showSocials = true)}
     onmouseleave={() => (showSocials = false)}
   >
@@ -80,6 +84,55 @@
         <JoinButtonExpanded/>
       </div>
     {/if}
+  </div> -->
+
+  <!-- <div class="relative group">
+    <Button class="relative bg-[#E880C8] hover:bg-[#FFFFFF] text-2xl/[28px] text-black font-newcm">
+      Join
+      <img src={down_arrow} alt="">
+    </Button>
+    <div class="
+      absolute right-1/256 flex gap-[8px] w-[279px] opacity-0 group-hover:opacity-100
+    ">
+    
+    </div>
+  </div> -->
+
+
+  <!-- join button approach 2 -->
+  <div class="relative group inline-block">
+
+    <button class="flex items-center gap-2 bg-pink-500 text-black px-4 py-2 rounded transition-colors group-hover:bg-gray-200">
+      Join
+      <img src={down_arrow} alt="arrow">
+
+      <div class="
+        absolute
+        top-full
+        left-1/2
+        -translate-x-1/2
+        flex
+        gap-2
+        bg-white
+        opacity-0
+        group-hover:opacity-100 
+        transition-all
+        ease-in-out
+      ">
+        <div class="w-[56px] h-[56px]">
+          <img src={discord} class="w-full h-full object-cover" alt="Discord">
+        </div>
+        <div class="w-[56px] h-[56px]">
+          <img src={discord} class="w-full h-full object-cover" alt="Discord">
+        </div>
+        <div class="w-[56px] h-[56px]">
+          <img src={discord} class="w-full h-full object-cover" alt="Discord">
+        </div>
+        <div class="w-[56px] h-[56px]">
+          <img src={discord} class="w-full h-full object-cover" alt="Discord">
+        </div>
+      </div>
+    </button>
   </div>
 </div>
 
