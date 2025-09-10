@@ -1,0 +1,99 @@
+<script lang="ts">
+  import { page } from "$app/state";
+  import { afterNavigate } from "$app/navigation";
+  import { quadInOut } from "svelte/easing";
+  import { fade, fly } from "svelte/transition";
+  import { Icon } from "$lib/components/ui/icon";
+  import { Button } from "$lib/components/ui/button";
+  import { ChevronDown, ChevronUp } from "@lucide/svelte";
+  import NavItem from "./nav-item.svelte";
+  import Join from "./join.svelte";
+  import JoinSocial from "./join-social.svelte";
+
+  let open = false;
+
+  afterNavigate((navigation: import("@sveltejs/kit").AfterNavigate) => {
+    if (navigation.type === "link") {
+      open = false;
+    }
+  });
+</script>
+
+<!-- desktop -->
+<nav
+  class="bg-background sticky top-0 hidden flex-row items-center justify-between rounded-b-3xl p-3 md:flex"
+>
+  <a href="/" class="pb-1">
+    <Icon variant="aunsw" size={40} fill="var(--foreground)" />
+  </a>
+
+  <ul class="flex flex-row space-x-9">
+    <NavItem href="/events" label="Events" />
+    <NavItem href="/sponsors" label="Sponsors" />
+    <NavItem href="/info" label="Info" />
+    <NavItem href="/blog" label="Blog" />
+  </ul>
+
+  <Join />
+</nav>
+
+<!-- mobile -->
+<nav class="sticky top-0 flex flex-col gap-y-4 px-4 md:hidden">
+  <div class="z-1 flex items-center justify-between py-4">
+    <a href="/" class="pb-1">
+      <Icon variant="aunsw" size={36} fill="var(--foreground)" />
+    </a>
+
+    {#if !open}
+      <span transition:fade={{ duration: 100 }} class="text-3xl"
+        >{page.url.pathname.charAt(1).toUpperCase() +
+          page.url.pathname.slice(2)}</span
+      >
+    {/if}
+
+    <button class="flex items-center pr-1" onclick={() => (open = !open)}>
+      {#if open}
+        <ChevronUp size={36} />
+      {:else}
+        <ChevronDown size={36} />
+      {/if}
+    </button>
+  </div>
+
+  {#if open}
+    <div
+      transition:fly={{ y: -8, duration: 200, easing: quadInOut }}
+      class="bg-card absolute top-0 left-0 z-0 w-full rounded-b-3xl pt-[72px] ease-in-out"
+    >
+      <ul class="flex w-full flex-col space-y-5 py-4 pl-8">
+        <NavItem href="/events" label="Events" />
+        <NavItem href="/sponsors" label="Sponsors" />
+        <NavItem href="/info" label="Info" />
+        <NavItem href="/blog" label="Blog" />
+      </ul>
+
+      <div class="xs:justify-start flex justify-between space-x-4 px-8 py-6">
+        <JoinSocial
+          icon="discord"
+          label="Discord"
+          href="https://discord.gg/aunsw"
+        />
+        <JoinSocial
+          icon="instagram"
+          label="Instagram"
+          href="https://instagram.com/animeunsw"
+        />
+        <JoinSocial
+          icon="facebook"
+          label="Facebook"
+          href="https://www.facebook.com/unswanime/"
+        />
+        <JoinSocial
+          icon="xiaohongshu"
+          label="RedNote"
+          href="https://discord.gg/aunsw"
+        />
+      </div>
+    </div>
+  {/if}
+</nav>
