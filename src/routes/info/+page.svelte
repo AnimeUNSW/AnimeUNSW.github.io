@@ -1,10 +1,8 @@
 <script>
-  import Navbar from "../../lib/components/navbar.svelte"
   import InfoCard from "$lib/components/info_card.svelte";
 </script>
 
-<div class="font-newcm bg-pink-100">
-  <Navbar pageName="Info"></Navbar>
+<div>
   <div class="flex flex-col gap-y-[64px]">
     <div>
       Accordion frame

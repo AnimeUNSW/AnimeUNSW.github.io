@@ -1,12 +1,9 @@
 <script>
-  import Navbar from "../../lib/components/navbar.svelte"
   import SponsorCard from "../../lib/components/sponsor_card.svelte";
 </script>
 
 
 <div class="bg-[#E9DEEC] min-h-screen">
-  <Navbar pageName="Sponsors"></Navbar>
-
   <!-- todo: remove the need to create two separate divs for mobile and desktop later if possible -->
   <!-- sponsor box (desktop)-->
   <div class="flex justify-center w-full hidden md:flex">

@@ -1,7 +1,6 @@
 <script lang="ts">
-  import sampleImage from "../../lib/assets/discord.png"
+  import { Icon } from "$lib/components/ui/icon";
 </script>
-
 
 <!-- todo: fix hardcoded text and pictures later -->
  <!-- desktop design -->
@@ -14,7 +13,7 @@
 
   <!-- column 2, image -->
   <div class="flex w-[172px] h-[172px] rounded-[15px] items-center">
-    <img class="w-full h-full object-cover" src={sampleImage} alt="">
+    <Icon variant="discord" class="w-full h-full" />
   </div>
 </div>
 
@@ -28,6 +27,6 @@
 
   <!-- column 2, image -->
   <div class="flex w-[142px] h-[142px] rounded-[16px] items-center">
-    <img class="w-full h-full object-cover" src={sampleImage} alt="">
+    <Icon variant="discord" class="w-full h-full" />
   </div>
 </div>
