@@ -2,12 +2,9 @@
   import SponsorCard from "$lib/components/ui/sponsor/sponsor-card.svelte";
 </script>
 
-
-<div class="bg-[#E9DEEC] min-h-screen">
-  <!-- todo: remove the need to create two separate divs for mobile and desktop later if possible -->
-  <!-- sponsor box (desktop)-->
-  <div class="flex justify-center w-full hidden md:flex">
-    <div class="w-[934px] font-newcm flex flex-wrap gap-[24px]">
+<div class="md:mt-8 mt-[14px]">
+  <div class="flex justify-center w-full">
+    <div class="w-[376px] md:w-[934px] font-newcm flex flex-wrap gap-y-3 md:gap-6">
       <SponsorCard></SponsorCard>
       <SponsorCard></SponsorCard>
       <SponsorCard></SponsorCard>
@@ -15,18 +12,6 @@
       <SponsorCard></SponsorCard>
     </div>
   </div>
-
-  <!-- sponsor box mobile -->
-  <div class="flex justify-center w-full md:hidden">
-    <div class="w-[376px] font-newcm flex flex-wrap gap-y-[12px]">
-      <SponsorCard></SponsorCard>
-      <SponsorCard></SponsorCard>
-      <SponsorCard></SponsorCard>
-      <SponsorCard></SponsorCard>
-      <SponsorCard></SponsorCard>
-    </div>
-  </div>
-
 </div>
 
 
