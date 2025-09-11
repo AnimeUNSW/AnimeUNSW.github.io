@@ -1,5 +1,5 @@
 <script>
-  import SponsorCard from "../../lib/components/sponsor_card.svelte";
+  import SponsorCard from "$lib/components/ui/sponsor/sponsor-card.svelte";
 </script>
 
 
