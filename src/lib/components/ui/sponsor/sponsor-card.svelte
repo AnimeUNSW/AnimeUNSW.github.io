@@ -4,21 +4,22 @@
 
 <!-- todo: fix hardcoded text and pictures later -->
  <!-- desktop design -->
-<div class="flex w-[455px] h-[208px] justify-between p-[24px] rounded-[24px] gap-x-[24px] bg-white items-center hidden md:flex">
+<div class="flex w-[455px] h-[208px] justify-between p-6 rounded-3xl gap-x-6 bg-white items-center hidden md:flex">
   <!-- column 1 -->
-  <div class="flex flex-col w-[217px] h-[160px] gap-[16px]">
-    <h3 class="text-[24px]/[28px]">Durin :emote:</h3>
-    <span class="break-words text-[20px]/[24px]">Use code DurinLetMedoUnspeakableThingsToYou at checkout for 99% off!</span>
+  <div class="flex flex-col w-[217px] h-40 gap-4">
+    <h3 class="text-2xl">Durin :emote:</h3>
+    <!-- todo: migt need to change the line height to match the figma -->
+    <span class="break-words text-xl">Use code DurinLetMedoUnspeakableThingsToYou at checkout for 99% off!</span>
   </div>
 
   <!-- column 2, image -->
-  <div class="flex w-[172px] h-[172px] rounded-[15px] items-center">
+  <div class="flex w-43 h-43 rounded-[15px] items-center bg-[#E9DEEC]">
     <Icon variant="discord" class="w-full h-full" />
   </div>
 </div>
 
 <!-- mobile design -->
-<div class="flex w-[376px] h-[174px] justify-between p-[24px] rounded-[24px]  gap-x-[9px] bg-white items-center md:hidden">
+<div class="flex w-[376px] h-[174px] justify-between p-6 rounded-6  gap-x-[9px] bg-white items-center md:hidden">
   <!-- column 1 -->
   <div class="flex flex-col w-[189px] h-[124px] gap-[16px]">
     <h3 class="text-[28px]/[28px]">Durin :emote:</h3>

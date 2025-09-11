@@ -1,12 +1,11 @@
 <script>
   import InfoCard from "$lib/components/ui/info/info-card.svelte";
+  import Accordion from "$lib/components/ui/info/accordion.svelte";
 </script>
 
 <div>
   <div class="flex flex-col gap-y-[64px]">
-    <div>
-      Accordion frame
-    </div>
+    <Accordion />
 
     <!-- contact box frame 2 -->
     <div class="flex flex-col w-[822px] h-388px] gap-y-[70px] justify-center">
