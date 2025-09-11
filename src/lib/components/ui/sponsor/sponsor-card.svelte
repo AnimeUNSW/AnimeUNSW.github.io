@@ -1,5 +1,7 @@
 <script lang="ts">
   import { Icon } from "$lib/components/ui/icon";
+  import Facebook from "$lib/assets/facebook.png";
+  import droolingCat from "$lib/assets/drooling-cat.svg";
 </script>
 
 <div class="flex w-[376px] h-[174px] justify-between p-5 rounded-3xl gap-x-[9px] bg-white items-center md:w-[455px] md:h-[208px] md:p-6 md:rounded-3xl md:gap-x-6">
@@ -10,7 +12,7 @@
   </div>
 
   <!-- column 2, image -->
-  <div class="flex w-[142px] h-[142px] rounded-2xl items-center bg-[#E9DEEC] md:w-43 md:h-43 md:rounded-[15px]">
-    <Icon variant="discord" class="w-full h-full" />
+  <div class="flex w-[142px] h-[142px] rounded-2xl items-center justify-center bg-[#E9DEEC] md:w-43 md:h-43 md:rounded-[15px]">
+    <img src={droolingCat} class="w-full h-full object-contain" alt="">
   </div>
 </div>
