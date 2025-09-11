@@ -3,7 +3,7 @@
 </script>
 
 <!-- card -->
-<div class="w-[425px] h-[290px] flex items-center justify-center rounded-[24px] bg-white p-[28px]">
+<div class="w-[425px] h-[290px] flex items-center justify-center rounded-[24px] bg-white p-7">
   <!-- content inside of the card -->
   <div class="flex flex-col w-[369px] h-[234px] gap-y-[16px] text-justify">
     <h3 class="text-[24px]/[28px]">Hard coded text</h3>
