@@ -11,24 +11,24 @@
 </script>
 
 <!-- each indiviual item -->
-<div class="flex relative right-0 w-[665px] h-16">
+<div class="flex relative right-0 md:w-[665px] h-16 w-[362px]">
   <!-- div for text -->
-  <div class="my-[13px] mx-[12px]">
-    <span class="text-[24px]/[28px]">
+  <div class="md:my-[13px] md:mx-[12px] mx-3 my-4">
+    <span class="md:text-[24px]/[28px] text-[20px]/[28px]">
       Can you go back to the old one?
     </span>
   </div>
   <button class="absolute right-0 top-1/2 -translate-y-1/2" on:click={toggleAccordion}>
     {#if open}
-      <ChevronUp class="w-[42px] h-[42px]"/>
+      <ChevronUp class="md:w-[42px] md:h-[42px] w-[32px] h-[32px]"/>
     {:else}
-      <ChevronDown class="w-[42px] h-[42px]"/>
+      <ChevronDown class="md:w-[42px] md:h-[42px] w-[32px] h-[32px]"/>
     {/if}
   </button>
 </div>
 
 {#if open}
-  <div class="mb-3 ml-3 w-[599px] text-wrap">
-    <span class="text-xl/6 ">No! You’re stuck looking at this mess, deal with it, loser. If you’d like to file a complaint please send me a message on Discord at @soidjfoiefoisjfe (real) and I’ll see what I can do!</span>
+  <div class="mb-3 ml-3 md:w-[599px] w-[322px] text-wrap">
+    <span class="md:text-xl/6 text-[18px]/[20px]">No! You’re stuck looking at this mess, deal with it, loser. If you’d like to file a complaint please send me a message on Discord at @soidjfoiefoisjfe (real) and I’ll see what I can do!</span>
   </div>
 {/if}
