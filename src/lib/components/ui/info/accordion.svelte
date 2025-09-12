@@ -13,8 +13,8 @@
 <!-- each indiviual item -->
 <div class="flex relative right-0 md:w-[665px] h-16 w-[362px]">
   <!-- div for text -->
-  <div class="md:my-[13px] md:mx-[12px] mx-3 my-4">
-    <span class="md:text-[24px]/[28px] text-[20px]/[28px]">
+  <div class="md:my-[13px] md:mx-3 mx-3 my-4">
+    <span class="md:text-2xl/7 text-xl/7">
       Can you go back to the old one?
     </span>
   </div>
@@ -29,6 +29,6 @@
 
 {#if open}
   <div class="mb-3 ml-3 md:w-[599px] w-[322px] text-wrap">
-    <span class="md:text-xl/6 text-[18px]/[20px]">No! You’re stuck looking at this mess, deal with it, loser. If you’d like to file a complaint please send me a message on Discord at @soidjfoiefoisjfe (real) and I’ll see what I can do!</span>
+    <span class="md:text-xl/6 text-lg/5">No! You’re stuck looking at this mess, deal with it, loser. If you’d like to file a complaint please send me a message on Discord at @soidjfoiefoisjfe (real) and I’ll see what I can do!</span>
   </div>
 {/if}
