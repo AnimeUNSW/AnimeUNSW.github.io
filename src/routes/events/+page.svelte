@@ -7,11 +7,18 @@
 </script>
 
 <!-- outer div -->
-<div class="flex mt-8 justify-center">
-  <div class="flex flex-wrap w-[930px] gap-6 items-start">
-    <EventCard largeImage={false} line={shortText}/>
-    <EventCard largeImage={true} line={longText}/>
-    <EventCard largeImage={true} line={longText}/>
-    <EventCard largeImage={true} line={longText}/>
+<div class="flex md:mt-8 mt-[14px] justify-center">
+  <div class="flex flex-wrap md:w-[930px] w-[376px] md:gap-6 gap-3 items-start">
+    <!-- column 1 -->
+    <div class="flex flex-col md:gap-6 gap-3">
+      <EventCard largeImage={false} line={shortText}/>
+      <EventCard largeImage={true} line={longText}/>
+    </div>
+
+    <!-- column 2 -->
+    <div class="flex flex-col md:gap-6 gap-3">
+      <EventCard largeImage={true} line={longText}/>
+      <EventCard largeImage={false} line={shortText}/>
+    </div>
   </div>
 </div>
