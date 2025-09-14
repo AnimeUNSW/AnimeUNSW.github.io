@@ -15,7 +15,9 @@
   >
     <div class="flex flex-row items-center justify-between space-x-3 pr-3 pl-4">
       <p class="text-card-foreground text-lg">Join</p>
-      <ChevronDown />
+      <ChevronDown
+        class="transition-transform duration-200 group-hover:rotate-180"
+      />
     </div>
     <div
       class="flex flex-row items-center space-x-[6px] px-[6px] pt-2 opacity-0 transition-all group-hover:opacity-100"
