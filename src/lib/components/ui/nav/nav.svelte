@@ -5,7 +5,7 @@
   import { fade, fly } from "svelte/transition";
   import { Icon } from "$lib/components/ui/icon";
   import { Button } from "$lib/components/ui/button";
-  import { ChevronDown, ChevronUp } from "@lucide/svelte";
+  import { ChevronDown } from "@lucide/svelte";
   import NavItem from "./nav-item.svelte";
   import Join from "./join.svelte";
   import JoinSocial from "./join-social.svelte";
@@ -38,8 +38,10 @@
 </nav>
 
 <!-- mobile -->
-<nav class="sticky top-0 flex flex-col gap-y-4 px-4 md:hidden">
-  <div class="z-1 flex items-center justify-between py-4">
+<nav
+  class="bg-background sticky top-0 flex flex-col gap-y-4 rounded-b-3xl px-4 md:hidden"
+>
+  <div class="z-50 flex items-center justify-between py-4">
     <a href="/" class="pb-1">
       <Icon variant="aunsw" size={36} fill="var(--foreground)" />
     </a>
@@ -52,18 +54,17 @@
     {/if}
 
     <button class="flex items-center pr-1" onclick={() => (open = !open)}>
-      {#if open}
-        <ChevronUp size={36} />
-      {:else}
-        <ChevronDown size={36} />
-      {/if}
+      <ChevronDown
+        class={["transition-transform duration-200", open ? "rotate-180" : ""]}
+        size={36}
+      />
     </button>
   </div>
 
   {#if open}
     <div
       transition:fly={{ y: -8, duration: 200, easing: quadInOut }}
-      class="bg-card absolute top-0 left-0 z-0 w-full rounded-b-3xl pt-[72px] ease-in-out"
+      class="bg-card absolute top-0 left-0 z-40 w-full rounded-b-3xl pt-[72px] ease-in-out"
     >
       <ul class="flex w-full flex-col space-y-5 py-4 pl-8">
         <NavItem href="/events" label="Events" />
