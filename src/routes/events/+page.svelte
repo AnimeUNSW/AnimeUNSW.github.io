@@ -7,12 +7,12 @@
 <!-- outer div -->
 <div class="flex md:mt-8 mt-[14px] justify-center">
   <div class="flex w-full max-w-* md:gap-6 gap-3">
-    <!-- column 1 -->
-    <div class="grid lg:grid-cols-2 gap-3 md:gap-6 justify-center md:mt-8 mt-[14px] mx-auto">
-      <EventCard largeImage={false} line={shortText}/>
-      <EventCard largeImage={true} line={longText}/>
-      <EventCard largeImage={true} line={longText}/>
-      <EventCard largeImage={false} line={shortText}/>
+    <!-- masonry style -->
+    <div class="columns-1 lg:columns-2 gap-3 md:gap-6 justify-center md:mt-8 mt-[14px] mx-auto [&>div:not(:first-child)]:mt-3 md:[&>div:not(:first-child)]:mt-6">
+        <EventCard largeImage={false} line={shortText}/>
+        <EventCard largeImage={true} line={longText}/>
+        <EventCard largeImage={true} line={longText}/>
+        <EventCard largeImage={false} line={shortText}/>
     </div>
   </div>
 </div>
