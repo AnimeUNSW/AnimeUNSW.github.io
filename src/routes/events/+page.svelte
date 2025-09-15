@@ -1,5 +1,5 @@
 <script lang="ts">
-  import EventCard from "$lib/components/events/event-card.svelte";
+  import { EventCard } from "$lib/components/ui/events";
   const shortText = "AUNSW member in the wild"
   const longText = shortText + " but longer text real wow I love multiple lines mhmh true and real"
 </script>
