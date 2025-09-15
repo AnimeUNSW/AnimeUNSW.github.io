@@ -7,8 +7,6 @@
 <!-- outer div -->
 <div class="flex md:mt-8 mt-[14px] justify-center">
   <div class="flex w-full max-w-* md:gap-6 gap-3">
-    <!-- had to use 2 separate columns because the sizing of the cards would get stretched -->
-    <!-- todo: find a way to not use 2 separate divs? -->
     <!-- column 1 -->
     <div class="grid lg:grid-cols-2 gap-3 md:gap-6 justify-center md:mt-8 mt-[14px] mx-auto">
       <EventCard largeImage={false} line={shortText}/>
