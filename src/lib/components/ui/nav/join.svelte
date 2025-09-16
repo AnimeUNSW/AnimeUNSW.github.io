@@ -40,7 +40,7 @@
       <JoinSocial
         icon="xiaohongshu"
         label="RedNote"
-        href="https://discord.gg/aunsw"
+        href="https://www.xiaohongshu.com/user/profile/67dd3a43000000000d0095f5"
       />
     </div>
   </div>
