@@ -71,13 +71,17 @@
 {:else if variant === "facebook"}
   <img
     src={facebook}
-    class={`w-${size / 3} h-${size / 3} object-cover`}
+    height={(size * 5) / 4}
+    width={(size * 5) / 4}
+    class="object-cover"
     alt="Facebook"
   />
 {:else if variant === "xiaohongshu"}
   <img
     src={xiaohongshu}
-    class={`w-${size / 3} h-${size / 3} object-cover`}
+    height={(size * 5) / 4}
+    width={(size * 5) / 4}
+    class="object-cover"
     alt="RedNote"
   />
 {/if}
