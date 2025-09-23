@@ -54,7 +54,7 @@
         <Accordion.Trigger>How do I become a member?</Accordion.Trigger>
         <Accordion.Content>
           To become a member with us, go to our <a
-            href="https://campus.hellorubric.com/?s=12432"
+            href="https://campus.hellorubric.com/?tab=memberships&s=12432"
             class="text-primary underline">Rubric page</a
           > where you can buy a membership. If you are a UNSW student, please log
           in using SSO.
