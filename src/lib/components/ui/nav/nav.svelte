@@ -24,7 +24,7 @@
 
 <!-- desktop -->
 {#if page.url.pathname === "/"}
-  <div class="pointer-events-none absolute h-full">
+  <div class="pointer-events-none absolute z-50 h-full">
     <nav
       class={[
         "pointer-events-auto sticky top-0 hidden w-screen flex-row items-center justify-between rounded-b-3xl p-3 transition-all md:flex",

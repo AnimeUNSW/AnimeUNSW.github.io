@@ -30,13 +30,11 @@
   let scrollY;
 </script>
 
-<svelte:window bind:scrollY />
-
 <svelte:head>
   <title>AnimeUNSW</title>
 </svelte:head>
 
-<div class="relative -z-10">
+<div class="relative">
   <div class="h-[512px] w-screen overflow-hidden bg-black md:h-[768px]">
     <div
       class="p-[10vw 20vw] bg-position-[center 25%] box-border h-full w-full bg-[url($lib/assets/home/desert.png)] bg-cover bg-no-repeat opacity-60"
@@ -60,7 +58,7 @@
     ></path></svg
   >
   <div
-    class="absolute -bottom-5 flex w-full items-center justify-center lg:-bottom-3 xl:-bottom-1"
+    class="absolute -bottom-5 z-10 flex w-full items-center justify-center lg:-bottom-3 xl:-bottom-1"
   >
     <img src={ibi_fg} alt="Ibi" class="w-[200px] md:w-[300px]" />
   </div>
@@ -76,7 +74,7 @@
     </h2>
   </div>
 </div>
-<div class="bg-background relative -z-20 flex items-center justify-center pb-4">
+<div class="bg-background relative flex items-center justify-center pb-4">
   <div
     class="mt-8 flex w-full flex-col space-y-8 self-center md:space-y-16 md:px-8 lg:w-[1152px]"
   >
@@ -93,7 +91,7 @@
         </p>
       </div>
       <div
-        class="grid min-w-fit grid-cols-2 gap-2 min-[724px]:grid-cols-4 md:grid-cols-2"
+        class="z-20 grid min-w-fit grid-cols-2 gap-2 min-[724px]:grid-cols-4 md:grid-cols-2"
       >
         <SocialCard icon="discord" href="https://discord.gg/aunsw"
           >3200+ Members</SocialCard
@@ -196,3 +194,5 @@
     <Icon variant="arc" size={69} fill="var(--foreground)" />
   </div>
 </div>
+
+<svelte:window bind:scrollY />
