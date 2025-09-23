@@ -13,7 +13,7 @@
 </script>
 
 <svelte:head>
-    <title>Sponsors | AnimeUNSW</title>
+  <title>Sponsors | AnimeUNSW</title>
 </svelte:head>
 
 <div

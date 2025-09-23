@@ -71,7 +71,7 @@
 
 <!-- mobile -->
 {#if page.url.pathname === "/"}
-  <div class="pointer-events-none absolute h-full z-50">
+  <div class="pointer-events-none absolute z-50 h-full">
     <nav
       class={[
         "pointer-events-auto sticky top-0 flex w-screen flex-col gap-y-4 rounded-b-3xl px-4 transition-all md:hidden",

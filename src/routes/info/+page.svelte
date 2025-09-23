@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-    <title>Info | AnimeUNSW</title>
+  <title>Info | AnimeUNSW</title>
 </svelte:head>
 
 <div

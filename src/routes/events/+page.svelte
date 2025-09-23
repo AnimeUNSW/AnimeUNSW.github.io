@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-    <title>Events | AnimeUNSW</title>
+  <title>Events | AnimeUNSW</title>
 </svelte:head>
 
 <div class="mt-3 mb-8 flex w-full flex-col items-center px-2 md:mt-8 md:px-8">

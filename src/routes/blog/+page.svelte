@@ -2,7 +2,7 @@
 </script>
 
 <svelte:head>
-    <title>Blog | AnimeUNSW</title>
+  <title>Blog | AnimeUNSW</title>
 </svelte:head>
 
 <div

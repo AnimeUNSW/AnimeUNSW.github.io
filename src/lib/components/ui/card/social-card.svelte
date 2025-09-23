@@ -16,7 +16,7 @@
   class="group bg-card hover:bg-card/85 flex w-43 items-center gap-4 rounded-3xl p-2 pr-4 transition-all hover:rounded-xl md:w-55"
 >
   <div
-    class="bg-primary flex h-14 w-14 items-center justify-center rounded-2xl group-hover:rounded-lg transition-all md:h-20 md:w-20"
+    class="bg-primary flex h-14 w-14 items-center justify-center rounded-2xl transition-all group-hover:rounded-lg md:h-20 md:w-20"
   >
     <Icon variant={icon} fill="white" size={md.current ? 36 : 24} />
   </div>

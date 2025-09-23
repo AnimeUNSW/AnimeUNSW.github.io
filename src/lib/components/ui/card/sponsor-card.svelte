@@ -19,7 +19,7 @@
   </div>
 
   <div
-    class="transition-all flex h-36 w-36 shrink-0 items-center justify-center rounded-2xl group-hover:rounded-sm bg-white sm:h-44 sm:w-44"
+    class="flex h-36 w-36 shrink-0 items-center justify-center rounded-2xl bg-white transition-all group-hover:rounded-sm sm:h-44 sm:w-44"
   >
     <img
       src={image}
