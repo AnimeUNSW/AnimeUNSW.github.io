@@ -3,6 +3,10 @@
   import * as Accordion from "$lib/components/ui/accordion";
 </script>
 
+<svelte:head>
+    <title>Info | AnimeUNSW</title>
+</svelte:head>
+
 <div
   class="mt-3 flex flex-col items-center space-y-4 px-4 sm:px-8 md:mt-8 md:space-y-8"
 >

@@ -1,16 +1,20 @@
 <script>
   import { SponsorCard } from "$lib/components/ui/card";
-  import animeAtAbbotsford from "$lib/assets/anime_at_abbotsford.png";
-  import hamakonoBurwood from "$lib/assets/hamakono_burwood.png";
-  import harajukuGyoza from "$lib/assets/harajuku_gyoza.png";
-  import hobbyCo from "$lib/assets/hobbyco.png";
-  import isekaiGacha from "$lib/assets/isekai_gacha.png";
-  import kingpin from "$lib/assets/kingpin.png";
-  import mangaMate from "$lib/assets/manga_mate.png";
-  import patchesParadise from "$lib/assets/patches_paradise.png";
-  import sugoicoAU from "$lib/assets/sugoico_au.png";
-  import viaArtists from "$lib/assets/via_artists.png";
+  import animeAtAbbotsford from "$lib/assets/sponsors/anime_at_abbotsford.png";
+  import hamakonoBurwood from "$lib/assets/sponsors/hamakono_burwood.png";
+  import harajukuGyoza from "$lib/assets/sponsors/harajuku_gyoza.png";
+  import hobbyCo from "$lib/assets/sponsors/hobbyco.png";
+  import isekaiGacha from "$lib/assets/sponsors/isekai_gacha.png";
+  import kingpin from "$lib/assets/sponsors/kingpin.png";
+  import mangaMate from "$lib/assets/sponsors/manga_mate.png";
+  import patchesParadise from "$lib/assets/sponsors/patches_paradise.png";
+  import sugoicoAU from "$lib/assets/sponsors/sugoico_au.png";
+  import viaArtists from "$lib/assets/sponsors/via_artists.png";
 </script>
+
+<svelte:head>
+    <title>Sponsors | AnimeUNSW</title>
+</svelte:head>
 
 <div
   class="mt-3 mb-8 flex flex-wrap justify-center gap-3 px-4 md:mt-8 md:gap-6"
