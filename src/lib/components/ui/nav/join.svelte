@@ -26,6 +26,7 @@
         icon="discord"
         label="Discord"
         href="https://discord.gg/aunsw"
+        left={true}
       />
       <JoinSocial
         icon="instagram"
@@ -41,6 +42,7 @@
         icon="xiaohongshu"
         label="RedNote"
         href="https://www.xiaohongshu.com/user/profile/67dd3a43000000000d0095f5"
+        right={true}
       />
     </div>
   </div>

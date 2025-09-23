@@ -28,6 +28,8 @@
   };
 
   let scrollY;
+
+  import { browser } from '$app/environment';
 </script>
 
 <svelte:head>
@@ -149,6 +151,7 @@
         <div
           class="grid h-fit w-fit grid-cols-3 items-center justify-center gap-2 px-2 md:px-0"
         >
+          {#if browser}
           {#each randomSponsors() as [_path, module]}
             <div
               class="flex aspect-square h-full w-full items-center justify-center rounded-3xl bg-white p-4 sm:h-32 sm:w-32"
@@ -160,6 +163,7 @@
               />
             </div>
           {/each}
+          {/if}
         </div>
       </div>
     </div>
