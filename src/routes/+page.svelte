@@ -63,7 +63,7 @@
     <img src={ibi_fg} alt="Ibi" class="w-[200px] md:w-[300px]" />
   </div>
   <div
-    class="absolute top-0 left-0 flex h-full w-full flex-col items-center justify-center space-y-4 pb-8 text-white md:pb-64"
+    class="absolute top-0 left-0 z-20 flex h-full w-full flex-col items-center justify-center space-y-4 pb-8 text-white md:pb-64"
     style="transform: translateY({scrollY * 0.125}px);"
   >
     <h1 class="text-4xl font-bold min-[400px]:text-5xl md:text-7xl">
