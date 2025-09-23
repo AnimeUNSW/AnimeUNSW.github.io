@@ -117,7 +117,7 @@
           </ul>
 
           <div
-            class="xs:justify-start flex justify-between space-x-4 px-8 py-6"
+            class="xs:justify-start xs:space-x-4 xs:px-8 xs:pb-6 flex justify-between space-x-1 px-4 pt-6 pb-4"
           >
             <JoinSocial
               icon="rubric"
@@ -190,7 +190,7 @@
         </ul>
 
         <div
-          class="xs:justify-start xs:space-x-4 xs:px-8 flex justify-between space-x-2 px-4 py-6"
+          class="xs:justify-start xs:space-x-4 xs:px-8 xs:pb-6 flex justify-between space-x-1 px-4 pt-6 pb-4"
         >
           <JoinSocial
             icon="rubric"

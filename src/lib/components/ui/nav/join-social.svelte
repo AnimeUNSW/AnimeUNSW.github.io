@@ -19,7 +19,7 @@
     "bg-primary hover:bg-primary/95 flex h-16 items-center justify-center rounded-2xl transition-all hover:rounded-t-lg md:h-12",
     !left ? "hover:rounded-bl-lg" : "",
     !right ? "hover:rounded-br-lg" : "",
-    big ? "w-32 md:w-full" : "w-16 md:w-12",
+    big ? "xs:w-32 w-24 md:w-full" : "w-16 md:w-12",
   ]}
 >
   <Icon
