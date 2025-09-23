@@ -120,6 +120,12 @@
             class="xs:justify-start flex justify-between space-x-4 px-8 py-6"
           >
             <JoinSocial
+              icon="rubric"
+              label="Rubric"
+              href="https://campus.hellorubric.com/?s=12432"
+              big={true}
+            />
+            <JoinSocial
               icon="discord"
               label="Discord"
               href="https://discord.gg/aunsw"
@@ -183,7 +189,15 @@
           <NavItem href="/blog" label="Blog" />
         </ul>
 
-        <div class="xs:justify-start flex justify-between space-x-4 px-8 py-6">
+        <div
+          class="xs:justify-start xs:space-x-4 xs:px-8 flex justify-between space-x-2 px-4 py-6"
+        >
+          <JoinSocial
+            icon="rubric"
+            label="Rubric"
+            href="https://campus.hellorubric.com/?s=12432"
+            big={true}
+          />
           <JoinSocial
             icon="discord"
             label="Discord"

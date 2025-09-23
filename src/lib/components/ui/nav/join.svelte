@@ -11,7 +11,7 @@
     <ChevronDown />
   </div>
   <div
-    class="bg-primary group-hover:bg-card invisible absolute top-0 right-0 flex h-[42px] w-[97.2px] flex-col rounded-[21px] pt-2 pb-[6px] transition-all duration-200 ease-in-out group-hover:visible group-hover:h-[98px] group-hover:w-[222px]"
+    class="bg-primary group-hover:bg-card invisible absolute top-0 right-0 flex h-[42px] w-[97.2px] flex-col rounded-[21px] pt-2 pb-[6px] transition-all duration-200 ease-in-out group-hover:visible group-hover:h-[151px] group-hover:w-[222px]"
   >
     <div class="flex flex-row items-center justify-between space-x-3 pr-3 pl-4">
       <p class="text-card-foreground text-lg">Join</p>
@@ -20,30 +20,38 @@
       />
     </div>
     <div
-      class="flex flex-row items-center space-x-[6px] px-[6px] pt-2 opacity-0 transition-all group-hover:opacity-100"
+      class="flex flex-col space-y-[6px] px-[6px] pt-2 opacity-0 transition-all group-hover:opacity-100"
     >
       <JoinSocial
-        icon="discord"
-        label="Discord"
-        href="https://discord.gg/aunsw"
-        left={true}
+        icon="rubric"
+        label="Rubric"
+        href="https://campus.hellorubric.com/?s=12432"
+        big={true}
       />
-      <JoinSocial
-        icon="instagram"
-        label="Instagram"
-        href="https://instagram.com/animeunsw"
-      />
-      <JoinSocial
-        icon="facebook"
-        label="Facebook"
-        href="https://www.facebook.com/unswanime/"
-      />
-      <JoinSocial
-        icon="xiaohongshu"
-        label="RedNote"
-        href="https://www.xiaohongshu.com/user/profile/67dd3a43000000000d0095f5"
-        right={true}
-      />
+      <div class="flex flex-row items-center space-x-[6px]">
+        <JoinSocial
+          icon="discord"
+          label="Discord"
+          href="https://discord.gg/aunsw"
+          left={true}
+        />
+        <JoinSocial
+          icon="instagram"
+          label="Instagram"
+          href="https://instagram.com/animeunsw"
+        />
+        <JoinSocial
+          icon="facebook"
+          label="Facebook"
+          href="https://www.facebook.com/unswanime/"
+        />
+        <JoinSocial
+          icon="xiaohongshu"
+          label="RedNote"
+          href="https://www.xiaohongshu.com/user/profile/67dd3a43000000000d0095f5"
+          right={true}
+        />
+      </div>
     </div>
   </div>
 </button>

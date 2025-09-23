@@ -5,7 +5,8 @@
     | "instagram"
     | "facebook"
     | "xiaohongshu"
-    | "arc";
+    | "arc"
+    | "rubric";
   export type IconProps =
     import("svelte/elements").SvelteHTMLElements["svg"] & {
       variant: IconVariant;
@@ -18,6 +19,7 @@
 <script lang="ts">
   import facebook from "$lib/assets/socials/facebook.png";
   import xiaohongshu from "$lib/assets/socials/xiaohongshu.webp";
+  import rubric from "$lib/assets/socials/rubric.png";
 
   let {
     variant,
@@ -160,4 +162,12 @@
     />
     />
   </svg>
+{:else if variant === "rubric"}
+  <img
+    src={rubric}
+    height={size}
+    width={size}
+    class="object-cover"
+    alt="Rubric"
+  />
 {/if}

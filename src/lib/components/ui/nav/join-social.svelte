@@ -2,6 +2,7 @@
   export let icon: IconVariant;
   export let label: string;
   export let href: string;
+  export let big = false;
   export let left = false;
   export let right = false;
 
@@ -15,10 +16,15 @@
   {href}
   aria-label={label}
   class={[
-    "bg-primary hover:bg-primary/95 flex h-16 w-16 items-center justify-center rounded-2xl transition-all hover:rounded-t-lg md:h-12 md:w-12",
+    "bg-primary hover:bg-primary/95 flex h-16 items-center justify-center rounded-2xl transition-all hover:rounded-t-lg md:h-12",
     !left ? "hover:rounded-bl-lg" : "",
     !right ? "hover:rounded-br-lg" : "",
+    big ? "w-32 md:w-full" : "w-16 md:w-12",
   ]}
 >
-  <Icon variant={icon} fill="white" size={md.current ? 24 : 30} />
+  <Icon
+    variant={icon}
+    fill="white"
+    size={big ? (md.current ? 56 : 60) : md.current ? 24 : 30}
+  />
 </a>

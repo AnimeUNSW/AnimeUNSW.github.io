@@ -16,7 +16,11 @@
         <Accordion.Trigger>How do I come to events?</Accordion.Trigger>
         <Accordion.Content>
           You can find information about our events on our social media such as
-          our Instagram and Discord.
+          our Instagram and Discord. A full list of upcoming events can be found
+          on our <a
+            href="https://campus.hellorubric.com/?s=12432"
+            class="text-primary underline">Rubric page</a
+          >.
         </Accordion.Content>
       </Accordion.Item>
       <Accordion.Item value="item-2">
@@ -49,9 +53,11 @@
       <Accordion.Item value="item-5">
         <Accordion.Trigger>How do I become a member?</Accordion.Trigger>
         <Accordion.Content>
-          Easiest way is to come to an in-person event and we can walk you
-          through the process on the spot as well as give you your AUNSW
-          membership card.
+          To become a member with us, go to our <a
+            href="https://campus.hellorubric.com/?s=12432"
+            class="text-primary underline">Rubric page</a
+          > where you can buy a membership. If you are a UNSW student, please log
+          in using SSO.
         </Accordion.Content>
       </Accordion.Item>
       <Accordion.Item value="item-6">
