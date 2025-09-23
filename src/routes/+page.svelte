@@ -19,6 +19,7 @@
   const sponsorImageModules = import.meta.glob("$lib/assets/sponsors/*.png", {
     eager: true,
   });
+  import sponsors from "$lib/assets/sponsors/sponsors.json";
 
   const randomSponsors = () => {
     const shuffled = Object.entries(sponsorImageModules).sort(
@@ -86,10 +87,12 @@
       <div class="flex w-full flex-col space-y-2 px-6 md:max-w-[448px] md:px-0">
         <h2 class="text-3xl">About</h2>
         <p class="text-justify text-lg/6">
-          We do a few things like animeing and animeing yeah that’s all. Oh!
-          Also we anime which is pretty cool yk you ever anime’d before it’s
-          kinda crazy just like me haha ikr that’s funny I’m funny please laugh
-          me when I don’t lorum ipsem mhm yep yeah true yeah
+          A society formed by students with a passion in anime/manga that has
+          continued to run exciting events both online and IRL. We’re always
+          giving away prizes for competitions/raffles so stay tuned!! We’ve
+          grown into one of Sydney’s biggest anime clubs! Memberships are open
+          to anyone, as we strive to gather students interested in anime/manga
+          to socialise and form friendships.
         </p>
       </div>
       <div
@@ -107,7 +110,7 @@
         <SocialCard
           icon="xiaohongshu"
           href="https://www.xiaohongshu.com/user/profile/67dd3a43000000000d0095f5"
-          >10+ Followers</SocialCard
+          >140+ Followers</SocialCard
         >
       </div>
     </div>
@@ -141,8 +144,9 @@
       <div class="flex w-full flex-col space-y-2 px-6 md:max-w-[448px] md:px-0">
         <h2 class="text-3xl">Perks</h2>
         <p class="text-justify text-lg/6">
-          We have a bunch of cool perks like idk sponsor discounts wow so
-          cool!!!!!!!!!!!!
+          As a member with us, you also unlock access to countless discounts
+          from our valued sponsors, as well as discounts to our larger events
+          including major parties.
         </p>
       </div>
       <div
@@ -152,16 +156,17 @@
           class="grid h-fit w-fit grid-cols-3 items-center justify-center gap-2 px-2 md:px-0"
         >
           {#if browser}
-            {#each randomSponsors() as [_path, module]}
-              <div
-                class="flex aspect-square h-full w-full items-center justify-center rounded-3xl bg-white p-4 sm:h-32 sm:w-32"
+            {#each randomSponsors() as [path, module]}
+              <a
+                href={sponsors[path.substring(path.lastIndexOf("/") + 1)].url}
+                class="flex aspect-square h-full w-full items-center justify-center rounded-3xl bg-white p-4 transition-all hover:rounded-xl hover:bg-white/85 sm:h-32 sm:w-32"
               >
                 <img
                   src={module.default}
-                  alt="owo"
+                  alt={sponsors[path.substring(path.lastIndexOf("/") + 1)].name}
                   class="h-[85%] w-[85%] object-contain"
                 />
-              </div>
+              </a>
             {/each}
           {/if}
         </div>
