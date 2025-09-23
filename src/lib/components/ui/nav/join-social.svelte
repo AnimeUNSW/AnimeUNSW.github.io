@@ -14,7 +14,11 @@
 <a
   {href}
   aria-label={label}
-  class={["bg-primary hover:bg-primary/95 flex h-16 w-16 items-center justify-center rounded-2xl transition-all hover:rounded-t-lg md:h-12 md:w-12", !left ? "hover:rounded-bl-lg" : "", !right ? "hover:rounded-br-lg" : ""]}
+  class={[
+    "bg-primary hover:bg-primary/95 flex h-16 w-16 items-center justify-center rounded-2xl transition-all hover:rounded-t-lg md:h-12 md:w-12",
+    !left ? "hover:rounded-bl-lg" : "",
+    !right ? "hover:rounded-br-lg" : "",
+  ]}
 >
   <Icon variant={icon} fill="white" size={md.current ? 24 : 30} />
 </a>

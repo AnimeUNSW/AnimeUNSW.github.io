@@ -29,7 +29,7 @@
 
   let scrollY;
 
-  import { browser } from '$app/environment';
+  import { browser } from "$app/environment";
 </script>
 
 <svelte:head>
@@ -93,7 +93,7 @@
         </p>
       </div>
       <div
-        class="z-20 grid min-w-fit grid-cols-2 gap-2 min-[724px]:grid-cols-4 md:grid-cols-2"
+        class="z-20 grid min-w-fit grid-cols-2 gap-2 pb-8 min-[724px]:grid-cols-4 md:grid-cols-2 md:pb-0"
       >
         <SocialCard icon="discord" href="https://discord.gg/aunsw"
           >3200+ Members</SocialCard
@@ -152,17 +152,17 @@
           class="grid h-fit w-fit grid-cols-3 items-center justify-center gap-2 px-2 md:px-0"
         >
           {#if browser}
-          {#each randomSponsors() as [_path, module]}
-            <div
-              class="flex aspect-square h-full w-full items-center justify-center rounded-3xl bg-white p-4 sm:h-32 sm:w-32"
-            >
-              <img
-                src={module.default}
-                alt="owo"
-                class="h-[85%] w-[85%] object-contain"
-              />
-            </div>
-          {/each}
+            {#each randomSponsors() as [_path, module]}
+              <div
+                class="flex aspect-square h-full w-full items-center justify-center rounded-3xl bg-white p-4 sm:h-32 sm:w-32"
+              >
+                <img
+                  src={module.default}
+                  alt="owo"
+                  class="h-[85%] w-[85%] object-contain"
+                />
+              </div>
+            {/each}
           {/if}
         </div>
       </div>
@@ -173,7 +173,7 @@
   <div
     class="absolute top-2 flex w-full items-center justify-center md:top-4 lg:top-6"
   >
-    <img src={feet} alt="Ibi" class="ml-48 w-[106px] md:w-[159px]" />
+    <img src={feet} alt="Ibi" class="ml-32 w-[106px] md:ml-48 md:w-[159px]" />
   </div>
   <svg
     viewBox="0 0 1440 58"
