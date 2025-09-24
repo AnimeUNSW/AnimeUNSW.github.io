@@ -78,7 +78,10 @@
         scrollY > 100 ? "bg-background/100" : "bg-background/0",
       ]}
     >
-      <div class="z-50 flex items-center justify-between py-4">
+      <button
+        class="z-50 flex items-center justify-between py-4"
+        onclick={() => (open = !open)}
+      >
         <a href="/" class="pb-1">
           <Icon
             variant="aunsw"
@@ -95,14 +98,14 @@
           >
         {/if}
 
-        <button class="flex items-center pr-1" onclick={() => (open = !open)}>
+        <div class="flex items-center pr-1">
           <ChevronDown
             class={["transition-all duration-200", open ? "rotate-180" : ""]}
             size={36}
             color={scrollY > 100 || open ? "var(--foreground)" : "white"}
           />
-        </button>
-      </div>
+        </div>
+      </button>
 
       {#if open}
         <div
@@ -117,7 +120,7 @@
           </ul>
 
           <div
-            class="xs:justify-start xs:space-x-4 xs:px-8 xs:pb-6 flex justify-between space-x-1 px-4 pt-6 pb-4"
+            class="xs:justify-start xs:space-x-4 xs:px-8 xs:pb-6 flex justify-between space-x-1 px-4 py-4"
           >
             <JoinSocial
               icon="rubric"
@@ -154,7 +157,10 @@
   <nav
     class="bg-background sticky top-0 flex flex-col gap-y-4 rounded-b-3xl px-4 md:hidden"
   >
-    <div class="z-50 flex items-center justify-between py-4">
+    <button
+      class="z-50 flex items-center justify-between py-4"
+      onclick={() => (open = !open)}
+    >
       <a href="/" class="pb-1">
         <Icon variant="aunsw" size={36} fill="var(--foreground)" />
       </a>
@@ -166,7 +172,7 @@
         >
       {/if}
 
-      <button class="flex items-center pr-1" onclick={() => (open = !open)}>
+      <div class="flex items-center pr-1">
         <ChevronDown
           class={[
             "transition-transform duration-200",
@@ -174,8 +180,8 @@
           ]}
           size={36}
         />
-      </button>
-    </div>
+      </div>
+    </button>
 
     {#if open}
       <div
@@ -190,7 +196,7 @@
         </ul>
 
         <div
-          class="xs:justify-start xs:space-x-4 xs:px-8 xs:pb-6 flex justify-between space-x-1 px-4 pt-6 pb-4"
+          class="xs:justify-start xs:space-x-4 xs:px-8 xs:pb-6 flex justify-between space-x-1 px-4 py-4"
         >
           <JoinSocial
             icon="rubric"
