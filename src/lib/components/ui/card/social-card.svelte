@@ -13,6 +13,7 @@
 
 <a
   {href}
+  target="_blank"
   class="group bg-card hover:bg-card/85 flex w-43 items-center gap-4 rounded-3xl p-2 pr-4 transition-all hover:rounded-xl min-[900px]:w-55"
 >
   <div

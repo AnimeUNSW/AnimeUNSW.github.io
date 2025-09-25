@@ -15,6 +15,7 @@
 <a
   {href}
   aria-label={label}
+  target="_blank"
   class={[
     "bg-primary hover:bg-primary/95 flex h-16 items-center justify-center rounded-2xl transition-all hover:rounded-t-lg md:h-12",
     !left ? "hover:rounded-bl-lg" : "",
