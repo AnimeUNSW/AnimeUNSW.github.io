@@ -9,11 +9,14 @@
 
 <a
   {href}
+  target="_blank"
   class="group bg-card hover:bg-card/85 flex w-full flex-row justify-between rounded-3xl p-4 transition-all hover:rounded-xl sm:w-[480px] sm:gap-x-4"
 >
-  <div class="flex min-w-0 shrink-1 flex-col justify-start gap-4 p-2 sm:pr-1">
-    <h3 class="text-2xl sm:text-2xl/6">{name}</h3>
-    <span class="text-lg/6 break-words sm:text-xl/6"
+  <div
+    class="flex min-w-0 shrink-1 flex-col justify-start gap-2 p-1 pr-3 sm:gap-4 sm:p-2 sm:pr-1"
+  >
+    <h3 class="text-xl sm:text-2xl/6">{name}</h3>
+    <span class="text-base/5 break-words sm:text-xl/6"
       >{@render children?.()}</span
     >
   </div>

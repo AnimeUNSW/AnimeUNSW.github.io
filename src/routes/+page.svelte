@@ -185,6 +185,7 @@
             {#each randomSponsors() as [path, module]}
               <a
                 href={sponsors[path.substring(path.lastIndexOf("/") + 1)].url}
+                target="_blank"
                 class="flex aspect-square h-full w-full items-center justify-center rounded-3xl bg-white p-4 transition-all hover:rounded-xl hover:bg-white/85 sm:h-32 sm:w-32"
               >
                 <img
@@ -227,6 +228,7 @@
     <p>
       Developed and maintained by <a
         href="https://github.com/rin-senpai"
+        target="_blank"
         class="text-primary underline">Rin</a
       >
     </p>

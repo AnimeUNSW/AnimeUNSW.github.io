@@ -38,5 +38,61 @@
   "via_artists.png": {
     "name": "Via Artists",
     "url": "https://viaartists.com/"
+  },
+  "genshin_whales.png": {
+    "name": "Genshin Whales",
+    "url": "https://www.genshinwhales.com.au/"
+  },
+  "hama_film_cabramatta.png": {
+    "name": "Hama Film Cabramatta",
+    "url": "https://www.instagram.com/hamakono_cabramatta/"
+  },
+  "hondrarake.png": {
+    "name": "Hondrarake",
+    "url": "https://fullofbooks.com.au/"
+  },
+  "iced_tea_aesthetics.png": {
+    "name": "Iced Tea Aesthetics",
+    "url": "https://www.it-aesthetics.com/"
+  },
+  "ito_en.png": {
+    "name": "ITO EN",
+    "url": "https://itoen.com.au/"
+  },
+  "japan_foundation.svg": {
+    "name": "Japan Foundation",
+    "url": "https://www.jpf.go.jp/e/"
+  },
+  "kahweiei.png": {
+    "name": "Kahweiei",
+    "url": "https://kahweiei.com/"
+  },
+  "lumins_workshop.png": {
+    "name": "Lumin's Workshop",
+    "url": "https://www.luminsworkshop.com/"
+  },
+  "red_bull.svg": {
+    "name": "Red Bull",
+    "url": "https://www.redbull.com/"
+  },
+  "roll_with_advantage.png": {
+    "name": "Roll With Advantage",
+    "url": "https://rollwithadvantage.com.au/"
+  },
+  "saigon_brew.png": {
+    "name": "Saigon Brew",
+    "url": "https://saigonbrew.com.au/"
+  },
+  "seconds_please.png": {
+    "name": "Seconds Please!",
+    "url": "https://secondsplease.jp/"
+  },
+  "sugo_toys.svg": {
+    "name": "Sugo! Toys",
+    "url": "https://sugotoys.com.au/"
+  },
+  "wuta_bistro.png": {
+    "name": "Wuta Bistro",
+    "url": "https://www.instagram.com/wutabistro_syd/"
   }
 }

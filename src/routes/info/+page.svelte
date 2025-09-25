@@ -19,6 +19,7 @@
           our Instagram and Discord. A full list of upcoming events can be found
           on our <a
             href="https://campus.hellorubric.com/?s=12432"
+            target="_blank"
             class="text-primary underline">Rubric page</a
           >.
         </Accordion.Content>
@@ -55,6 +56,7 @@
         <Accordion.Content>
           To become a member with us, go to our <a
             href="https://campus.hellorubric.com/?tab=memberships&s=12432"
+            target="_blank"
             class="text-primary underline">Rubric page</a
           > where you can buy a membership. If you are a UNSW student, please log
           in using SSO.
