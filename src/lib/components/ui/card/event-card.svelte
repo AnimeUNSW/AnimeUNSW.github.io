@@ -11,7 +11,7 @@
 >
   <enhanced:img
     src={image}
-    alt={alt}
+    {alt}
     class="w-full rounded-xl object-cover md:rounded-lg"
   />
   <p class="p-1 text-base/5 md:text-xl/6">{@render children?.()}</p>

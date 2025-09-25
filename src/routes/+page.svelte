@@ -18,9 +18,7 @@
   );
   import events from "$lib/assets/events/events.json";
   const randomEvents = () => {
-    return Object.entries(eventImageModules).sort(
-      () => Math.random() - 0.5,
-    );
+    return Object.entries(eventImageModules).sort(() => Math.random() - 0.5);
   };
 
   const sponsorImageModules = import.meta.glob("$lib/assets/sponsors/*.png", {
@@ -44,7 +42,9 @@
 </svelte:head>
 
 <div class="relative">
-  <div class="h-[512px] w-screen overflow-hidden bg-black min-[900px]:h-[768px]">
+  <div
+    class="h-[512px] w-screen overflow-hidden bg-black min-[900px]:h-[768px]"
+  >
     <div
       class="p-[10vw 20vw] bg-position-[center 25%] box-border h-full w-full bg-[url($lib/assets/home/desert.png)] bg-cover bg-no-repeat opacity-60"
       style="transform: translateY({scrollY * 0.25}px);"
@@ -79,7 +79,7 @@
       「AnimeUNSW」
     </h1>
     <h2 class="text-xl min-[436px]:text-2xl min-[900px]:text-3xl">
-      A few of us happen to like anime! (嘘)
+      バカじゃないの？
     </h2>
   </div>
 </div>
@@ -90,7 +90,9 @@
     <div
       class="flex flex-col items-center justify-between space-y-8 min-[900px]:flex-row min-[900px]:space-x-8"
     >
-      <div class="flex w-full flex-col space-y-2 px-6 min-[900px]:max-w-[448px] min-[900px]:px-0">
+      <div
+        class="flex w-full flex-col space-y-2 px-6 min-[900px]:max-w-[448px] min-[900px]:px-0"
+      >
         <h2 class="text-3xl">About</h2>
         <p class="text-justify text-lg/6">
           A society formed by students with a passion in anime/manga that has
@@ -123,33 +125,49 @@
     <div
       class="flex flex-col items-center justify-between space-y-8 min-[900px]:flex-row min-[900px]:space-x-8"
     >
-      <div class="flex w-full items-center justify-center min-[900px]:justify-start min-[1214px]:max-w-[640px]">
-        <Carousel.Root class="w-full max-w-full min-[1214px]:max-w-[512px] min-[1214px]:ml-0 min-[900px]:max-[1214px]:ml-8 min-[900px]:mr-12 ml-16 mr-16">
+      <div
+        class="flex w-full items-center justify-center min-[900px]:justify-start min-[1214px]:max-w-[640px]"
+      >
+        <Carousel.Root
+          class="mr-16 ml-16 w-full max-w-full min-[900px]:mr-12 min-[900px]:max-[1214px]:ml-8 min-[1214px]:ml-0 min-[1214px]:max-w-[512px]"
+        >
           <Carousel.Content>
-          {#if browser}
-            {#each randomEvents() as [path, module]}
-              <Carousel.Item class="flex justify-center items-center">
-                <enhanced:img src={module.default} alt={events[path.substring(path.lastIndexOf("/") + 1)].alt} class="w-full min-[1214px]:w-[512px] rounded-3xl" />
-              </Carousel.Item>
-            {/each}
-          {/if}
+            {#if browser}
+              {#each randomEvents() as [path, module]}
+                <Carousel.Item class="flex items-center justify-center">
+                  <enhanced:img
+                    src={module.default}
+                    alt={events[path.substring(path.lastIndexOf("/") + 1)].alt}
+                    class="w-full rounded-3xl min-[1214px]:w-[512px]"
+                  />
+                </Carousel.Item>
+              {/each}
+            {/if}
           </Carousel.Content>
           <Carousel.Previous />
           <Carousel.Next />
         </Carousel.Root>
       </div>
-      <div class="flex w-full flex-col space-y-2 px-6 min-[900px]:max-w-[448px] min-[900px]:px-0">
+      <div
+        class="flex w-full flex-col space-y-2 px-6 min-[900px]:max-w-[448px] min-[900px]:px-0"
+      >
         <h2 class="text-3xl">Events</h2>
         <p class="text-justify text-lg/6">
-          We have a bunch of cool events and I haven’t been to most of them!!!!
-          Wow!
+          We run a variety events throughout the year, including casual social
+          events, trivia, anime-themed challenges, off-campus outings, as well
+          as cosplay competitions and more!! Most events are free for members so
+          be sure to stop by and add some fun to your uni life whilst meeting
+          new friends. Be sure to check out our socials to find out about all
+          our upcoming events!
         </p>
       </div>
     </div>
     <div
       class="flex flex-col-reverse items-center justify-between space-y-8 space-y-reverse min-[900px]:flex-row min-[900px]:space-x-8"
     >
-      <div class="flex w-full flex-col space-y-2 px-6 min-[900px]:max-w-[448px] min-[900px]:px-0">
+      <div
+        class="flex w-full flex-col space-y-2 px-6 min-[900px]:max-w-[448px] min-[900px]:px-0"
+      >
         <h2 class="text-3xl">Perks</h2>
         <p class="text-justify text-lg/6">
           As a member with us, you also unlock access to countless discounts
@@ -186,7 +204,11 @@
   <div
     class="absolute top-2 flex w-full items-center justify-center min-[900px]:top-4 lg:top-6"
   >
-    <img src={feet} alt="Ibi" class="ml-32 w-[106px] min-[900px]:ml-48 min-[900px]:w-[159px]" />
+    <img
+      src={feet}
+      alt="Ibi"
+      class="ml-32 w-[106px] min-[900px]:ml-48 min-[900px]:w-[159px]"
+    />
   </div>
   <svg
     viewBox="0 0 1440 58"
