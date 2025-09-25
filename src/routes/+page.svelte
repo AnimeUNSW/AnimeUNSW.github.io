@@ -16,11 +16,17 @@
       },
     },
   );
+  import events from "$lib/assets/events/events.json";
+  const randomEvents = () => {
+    return Object.entries(eventImageModules).sort(
+      () => Math.random() - 0.5,
+    );
+  };
+
   const sponsorImageModules = import.meta.glob("$lib/assets/sponsors/*.png", {
     eager: true,
   });
   import sponsors from "$lib/assets/sponsors/sponsors.json";
-
   const randomSponsors = () => {
     const shuffled = Object.entries(sponsorImageModules).sort(
       () => Math.random() - 0.5,
@@ -38,7 +44,7 @@
 </svelte:head>
 
 <div class="relative">
-  <div class="h-[512px] w-screen overflow-hidden bg-black md:h-[768px]">
+  <div class="h-[512px] w-screen overflow-hidden bg-black min-[900px]:h-[768px]">
     <div
       class="p-[10vw 20vw] bg-position-[center 25%] box-border h-full w-full bg-[url($lib/assets/home/desert.png)] bg-cover bg-no-repeat opacity-60"
       style="transform: translateY({scrollY * 0.25}px);"
@@ -47,7 +53,7 @@
   <div
     class="absolute -bottom-5 flex w-full items-center justify-center lg:-bottom-3 xl:-bottom-1"
   >
-    <img src={ibi_bg} alt="Ibi" class="w-[200px] md:w-[300px]" />
+    <img src={ibi_bg} alt="Ibi" class="w-[200px] min-[900px]:w-[300px]" />
   </div>
   <svg
     viewBox="0 0 1440 58"
@@ -63,28 +69,28 @@
   <div
     class="absolute -bottom-5 z-10 flex w-full items-center justify-center lg:-bottom-3 xl:-bottom-1"
   >
-    <img src={ibi_fg} alt="Ibi" class="w-[200px] md:w-[300px]" />
+    <img src={ibi_fg} alt="Ibi" class="w-[200px] min-[900px]:w-[300px]" />
   </div>
   <div
-    class="absolute top-0 left-0 z-20 flex h-full w-full flex-col items-center justify-center space-y-4 pb-8 text-white md:pb-64"
+    class="absolute top-0 left-0 z-20 flex h-full w-full flex-col items-center justify-center space-y-4 pb-8 text-white min-[900px]:pb-64"
     style="transform: translateY({scrollY * 0.125}px);"
   >
-    <h1 class="text-4xl font-bold min-[400px]:text-5xl md:text-7xl">
+    <h1 class="text-4xl font-bold min-[400px]:text-5xl min-[900px]:text-7xl">
       「AnimeUNSW」
     </h1>
-    <h2 class="text-xl min-[436px]:text-2xl md:text-3xl">
+    <h2 class="text-xl min-[436px]:text-2xl min-[900px]:text-3xl">
       A few of us happen to like anime! (嘘)
     </h2>
   </div>
 </div>
 <div class="bg-background relative flex items-center justify-center pb-4">
   <div
-    class="mt-8 flex w-full flex-col space-y-8 self-center md:space-y-16 md:px-8 lg:w-[1152px]"
+    class="mt-8 flex w-full flex-col space-y-8 self-center min-[900px]:space-y-16 min-[900px]:px-8 lg:w-[1152px]"
   >
     <div
-      class="flex flex-col items-center justify-between space-y-8 md:flex-row md:space-x-8"
+      class="flex flex-col items-center justify-between space-y-8 min-[900px]:flex-row min-[900px]:space-x-8"
     >
-      <div class="flex w-full flex-col space-y-2 px-6 md:max-w-[448px] md:px-0">
+      <div class="flex w-full flex-col space-y-2 px-6 min-[900px]:max-w-[448px] min-[900px]:px-0">
         <h2 class="text-3xl">About</h2>
         <p class="text-justify text-lg/6">
           A society formed by students with a passion in anime/manga that has
@@ -96,7 +102,7 @@
         </p>
       </div>
       <div
-        class="z-20 grid min-w-fit grid-cols-2 gap-2 pb-8 min-[724px]:grid-cols-4 md:grid-cols-2 md:pb-0"
+        class="z-20 grid min-w-fit grid-cols-2 gap-2 pb-4 min-[724px]:grid-cols-4 min-[900px]:grid-cols-2 min-[900px]:pb-0"
       >
         <SocialCard icon="discord" href="https://discord.gg/aunsw"
           >3200+ Members</SocialCard
@@ -115,22 +121,24 @@
       </div>
     </div>
     <div
-      class="flex flex-col items-center justify-between space-y-8 md:flex-row md:space-x-12"
+      class="flex flex-col items-center justify-between space-y-8 min-[900px]:flex-row min-[900px]:space-x-8"
     >
-      <div class="flex w-full items-center justify-center md:max-w-[448px]">
-        <Carousel.Root class="w-full max-w-64">
+      <div class="flex w-full items-center justify-center min-[900px]:justify-start min-[1214px]:max-w-[640px]">
+        <Carousel.Root class="w-full max-w-full min-[1214px]:max-w-[512px] min-[1214px]:ml-0 min-[900px]:max-[1214px]:ml-8 min-[900px]:mr-12 ml-16 mr-16">
           <Carousel.Content>
-            {#each Object.entries(eventImageModules) as [_path, module]}
-              <Carousel.Item>
-                <enhanced:img src={module.default} alt="owo" class="w-64" />
+          {#if browser}
+            {#each randomEvents() as [path, module]}
+              <Carousel.Item class="flex justify-center items-center">
+                <enhanced:img src={module.default} alt={events[path.substring(path.lastIndexOf("/") + 1)].alt} class="w-full min-[1214px]:w-[512px] rounded-3xl" />
               </Carousel.Item>
             {/each}
+          {/if}
           </Carousel.Content>
           <Carousel.Previous />
           <Carousel.Next />
         </Carousel.Root>
       </div>
-      <div class="flex w-full flex-col space-y-2 px-6 md:max-w-[448px] md:px-0">
+      <div class="flex w-full flex-col space-y-2 px-6 min-[900px]:max-w-[448px] min-[900px]:px-0">
         <h2 class="text-3xl">Events</h2>
         <p class="text-justify text-lg/6">
           We have a bunch of cool events and I haven’t been to most of them!!!!
@@ -139,9 +147,9 @@
       </div>
     </div>
     <div
-      class="flex flex-col-reverse items-center justify-between space-y-8 space-y-reverse md:flex-row md:space-x-8"
+      class="flex flex-col-reverse items-center justify-between space-y-8 space-y-reverse min-[900px]:flex-row min-[900px]:space-x-8"
     >
-      <div class="flex w-full flex-col space-y-2 px-6 md:max-w-[448px] md:px-0">
+      <div class="flex w-full flex-col space-y-2 px-6 min-[900px]:max-w-[448px] min-[900px]:px-0">
         <h2 class="text-3xl">Perks</h2>
         <p class="text-justify text-lg/6">
           As a member with us, you also unlock access to countless discounts
@@ -150,10 +158,10 @@
         </p>
       </div>
       <div
-        class="flex w-full items-center justify-center md:max-w-[448px] md:min-w-[448px] md:justify-start"
+        class="flex w-full items-center justify-center min-[900px]:max-w-[448px] min-[900px]:min-w-[448px] min-[900px]:justify-start"
       >
         <div
-          class="grid h-fit w-fit grid-cols-3 items-center justify-center gap-2 px-2 md:px-0"
+          class="grid h-fit w-fit grid-cols-3 items-center justify-center gap-2 px-2 min-[900px]:px-0"
         >
           {#if browser}
             {#each randomSponsors() as [path, module]}
@@ -176,9 +184,9 @@
 </div>
 <div class="bg-card relative h-56">
   <div
-    class="absolute top-2 flex w-full items-center justify-center md:top-4 lg:top-6"
+    class="absolute top-2 flex w-full items-center justify-center min-[900px]:top-4 lg:top-6"
   >
-    <img src={feet} alt="Ibi" class="ml-32 w-[106px] md:ml-48 md:w-[159px]" />
+    <img src={feet} alt="Ibi" class="ml-32 w-[106px] min-[900px]:ml-48 min-[900px]:w-[159px]" />
   </div>
   <svg
     viewBox="0 0 1440 58"

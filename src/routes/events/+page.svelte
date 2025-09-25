@@ -1,31 +1,42 @@
 <script lang="ts">
   import { EventCard } from "$lib/components/ui/card";
-  const furina =
-    "https://media.assettype.com/afkgaming%2F2023-07%2F4cb3f3da-90dd-48bf-8258-46dd1b98bbc2%2FGenshin_Impact_Focalors_1.jpg?auto=format%2Ccompress&dpr=1.0&w=1200";
+  const eventImageModules = import.meta.glob(
+    "$lib/assets/events/*.{png,jpg,jpeg}",
+    {
+      eager: true,
+      query: {
+        enhanced: true,
+      },
+    },
+  );
+  import events from "$lib/assets/events/events.json";
+
+  const ordering = {
+    "kickoff.jpg": 0,
+    "social.jpg": 1,
+    "challenges.jpg": 2,
+    "trivia.jpg": 3,
+    "things.jpg": 4,
+    "cosplay.jpg": 5,
+    "anisyd.jpg": 6
+  }
+  const sortedEvents = Object.entries(eventImageModules).sort((a, b) => ordering[a[0].substring(a[0].lastIndexOf("/") + 1)] - ordering[b[0].substring(b[0].lastIndexOf("/") + 1)]);
+
+  import { browser } from "$app/environment";
 </script>
 
 <svelte:head>
   <title>Events | AnimeUNSW</title>
 </svelte:head>
 
-<div class="mt-3 mb-8 flex w-full flex-col items-center px-2 md:mt-8 md:px-8">
+<div class="mt-3 mb-8 flex w-full justify-center items-center px-2 md:mt-8 md:px-8">
   <div
-    class="w-full columns-1 gap-x-2 sm:columns-2 md:gap-x-6 xl:columns-3 2xl:w-[1472px]"
+    class="w-full columns-1 gap-x-2 sm:columns-2 md:gap-x-6 xl:columns-3 2xl:w-[1472px] text-left"
   >
-    <EventCard image={furina}>AUNSW member in the wild</EventCard>
-    <EventCard image={furina}>AUNSW member in the wild</EventCard>
-    <EventCard image={furina}>AUNSW member in the wild</EventCard>
-    <EventCard image={furina}
-      >AUNSW member in the wild but longer text real wow I love multiple lines
-      mhmh true and real</EventCard
-    >
-    <EventCard image={furina}
-      >AUNSW member in the wild but longer text real wow I love multiple lines
-      mhmh true and real</EventCard
-    >
-    <EventCard image={furina}
-      >AUNSW member in the wild but longer text real wow I love multiple lines
-      mhmh true and real</EventCard
-    >
+    {#if browser}
+        {#each sortedEvents as [path, module]}
+        <EventCard image={module.default} alt={events[path.substring(path.lastIndexOf("/") + 1)].alt}>{events[path.substring(path.lastIndexOf("/") + 1)].description}</EventCard>
+        {/each}
+    {/if}
   </div>
 </div>

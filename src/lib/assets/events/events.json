@@ -1,0 +1,30 @@
+{
+  "kickoff.jpg": {
+    "description": "Start the year with a bang and mingle with new members at our annual flagship kickoff event!",
+    "alt": "Kickoff"
+  },
+  "social.jpg": {
+    "description": "Enjoy fun, casual social events on campus and make friends with fellow anime fans along the way!",
+    "alt": "Social event"
+  },
+  "cosplay.jpg": {
+    "description": "We run cosplay competitions throughout the year, with prizes from our sponsors to be won!",
+    "alt": "Cosplay competition"
+  },
+  "trivia.jpg": {
+    "description": "Join in on anime trivia throughout the year for the chance to win prizes and achieve glory!",
+    "alt": "Trivia event"
+  },
+  "things.jpg": {
+    "description": "Experience new things and make new friends at off-campus outings!",
+    "alt": "Ice skating event"
+  },
+  "challenges.jpg": {
+    "description": "Compete in unique anime-themed challenges with fellow AnimeUNSW members!",
+    "alt": "Anime-themed challenge event"
+  },
+  "anisyd.jpg": {
+    "description": "Start the year with a bang and mingle with new members at our annual flagship kickoff event!",
+    "alt": "AniSyd event"
+  }
+}
